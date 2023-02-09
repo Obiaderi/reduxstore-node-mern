@@ -23,6 +23,9 @@ app.use(cors());
 // custom Use
 app.use("/users", userRouter);
 app.use("/tour", tourRouter);
+app.use("/", (req, res) => {
+  res.send("Welcome to ReduxStore APIs");
+});
 
 mongoose.set("strictQuery", false);
 mongoose
